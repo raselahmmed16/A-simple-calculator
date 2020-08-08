@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator simplify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="calculator simplify.css">
+</head>
+<body>
+    
+    <div class="calculator">
+        <form action="" name="form">
+            <input type="text" value="" class="form-control main-bar" name="display" id="inp" placeholder="0">
+
+
+            <div class="button-area">
+                <div class="line" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="1" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="2" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="3" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="+" class="btn btn-warning" onclick= "calculate(this.value)">
+                </div>
+               
+                <div class="line">
+                    <input type="button" name="btn" value="7" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="8" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="9" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="*" class="btn btn-warning" onclick= "calculate(this.value)">
+                </div>
+
+                <div class="line">
+                    <input type="button" name="btn" value="4" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="5" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="6" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="-" class="btn btn-warning" onclick= "calculate(this.value)">
+                </div>
+
+                
+
+                <div class="line">
+                    <input type="button" name="btn" value="1" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="2" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="3" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="+" class="btn btn-warning" onclick= "calculate(this.value)">
+                </div>
+
+                <div class="line">
+                    <input type="button" name="btn" value="0" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="00" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="/" class="btn btn-primary" onclick= "calculate(this.value)">
+                    <input type="button" name="btn" value="AC" class="btn btn-warning" onclick= "display.value = null">
+                </div>
+                <div class="last">
+                    <input type="button" name="btn" value="C" class="btn btn-warning" onclick="display.value =display.value.slice(0, -1)">
+                    <input type="button" name="btn" value="=" class="btn btn-warning" onclick="display.value = eval(display.value)">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script>
+       function calculate(x) {
+            form.display.value += x;// detail form is form.display.value=form.display.value + x
+       }
+
+    </script>
+</body>
+</html>
